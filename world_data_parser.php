@@ -19,8 +19,4 @@
       # code...
     }
   }
-
-  $x = new WorldDataParser;
-  echo $x->parseCSV();
-
- ?>
+?>
