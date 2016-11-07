@@ -13,9 +13,15 @@
 
     }
 
-    public function saveXML($value='')
+    public function saveXML($array)
     {
-      # code...
+      $simpleXML = new SimpleXMLElement('<data></data>');
+      foreach ($array as $key => $value) {
+        foreach ($value as $valkey => $valprop) {
+          $simpleXML->addChild("$valprop");
+        }
+      }
+      echo $simpleXML->asXML();
     }
 
     public function printXML($value='')
