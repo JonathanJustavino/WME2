@@ -5,11 +5,12 @@
     {
       $data = array();
       $handle = fopen($path, 'r');
-      echo "created an array" .  "\xA";
       while( ($elem = fgetcsv($handle)) !== false ) {
           $data[] = $elem;
       }
+      fclose($handle);
       return $data;
+
     }
 
     public function saveXML($value='')

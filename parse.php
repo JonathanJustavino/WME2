@@ -6,4 +6,8 @@
   $path = './world_data.csv';
 
   $data =  $myParser->parseCSV($path);
+
+  echo "<pre>";
+  print_r($data);
+  echo "</pre>";
  ?>
