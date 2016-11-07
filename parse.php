@@ -6,6 +6,4 @@
   $path = './world_data.csv';
 
   $data =  $myParser->parseCSV($path);
-
-  echo $data .  "\xA";
  ?>

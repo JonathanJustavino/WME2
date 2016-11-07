@@ -3,9 +3,13 @@
 
     public function parseCSV($path)
     {
+      $data = array();
       $handle = fopen($path, 'r');
       echo "created an array" .  "\xA";
-      return fgetcsv($handle, 1000,",");
+      while( ($elem = fgetcsv($handle)) !== false ) {
+          $data[] = $elem;
+      }
+      return $data;
     }
 
     public function saveXML($value='')
