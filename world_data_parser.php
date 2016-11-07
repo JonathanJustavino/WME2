@@ -1,11 +1,10 @@
-<? echo "World Data Parser Class\n";?>
-
 <?php
   class WorldDataParser{
 
-    public function parseCSV($path = './world_data.csv')
+    public function parseCSV($path)
     {
       $handle = fopen($path, 'r');
+      echo "created an array" .  "\xA";
       return fgetcsv($handle, 1000,",");
     }
 
