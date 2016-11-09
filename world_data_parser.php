@@ -22,17 +22,13 @@
     public function saveXML($array)
     {
       $simpleXML = new SimpleXMLElement('<data></data>');
-      $first = array_shift($array);
-      foreach ($first as $key => $value) {
-          $simpleXML->addChild("$value");
-      }
       foreach ($array as $key => $value) {
         foreach ($value as $valkey => $valprop) {
-          $trimmed = trim($valprop);
+          $trimmed = rtrim($valprop);
           $simpleXML->addChild("$trimmed");
         }
       }
-      // echo $simpleXML->asXML();
+      //echo $simpleXML->asXML();
     }
 
     public function printXML($value='')
