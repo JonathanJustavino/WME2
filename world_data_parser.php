@@ -19,10 +19,11 @@
           $simpleXML->addChild("$trimmed");
         }
       }
-      //echo $simpleXML->asXML();
+      $simpleXML->asXML('./world_data.xml');
+      return $simpleXML;
     }
 
-    
+
     public function printXML($xmlPath, $xsltPath){
         $xsldoc = new DOMDocument();
         $xsldoc->load($xsltPath);
