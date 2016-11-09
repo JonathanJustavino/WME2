@@ -32,7 +32,7 @@
           $simpleXML->addChild("$trimmed");
         }
       }
-      echo $simpleXML->asXML();
+      // echo $simpleXML->asXML();
     }
 
     public function printXML($value='')
