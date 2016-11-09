@@ -25,7 +25,7 @@
       //echo $simpleXML->asXML();
     }
 
-    public function printXML($value='')
+    public function printXML($xmlPath, $xsltPath)
     {
       # code...
     }

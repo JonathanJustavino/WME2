@@ -11,10 +11,10 @@ $parser = xml_parser_create();
 $result = xml_parse($parser, $xmlData);
 
 if($result === 1){
-  echo "Die XML Datei wurde erfolgreich gespeichert.";
+  echo "XML Savestatus: erfolgreich (1)";
   return true;
 }
-echo "Die XML Datei konnte nicht gespeichert werden!";
+echo "XML Savestatus: fehlgeschlagen (0)";
 return false;
 
  ?>
