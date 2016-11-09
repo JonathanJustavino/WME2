@@ -13,12 +13,6 @@
 
     }
 
-    /**
-    * Use array_shift() to take first elem
-    * array_unshift to put it back
-    *
-    */
-
     public function saveXML($array)
     {
       $simpleXML = new SimpleXMLElement('<data></data>');
