@@ -1,8 +1,7 @@
 <?php
   class WorldDataParser{
 
-    public function parseCSV($path)
-    {
+    public function parseCSV($path){
       $data = array();
       $handle = fopen($path, 'r');
       while( ($elem = fgetcsv($handle)) !== false ) {
@@ -10,11 +9,9 @@
       }
       fclose($handle);
       return $data;
-
     }
 
-    public function saveXML($array)
-    {
+    public function saveXML($array){
       $simpleXML = new SimpleXMLElement('<data></data>');
       foreach ($array as $key => $value) {
         foreach ($value as $valkey => $valprop) {
@@ -25,9 +22,17 @@
       //echo $simpleXML->asXML();
     }
 
-    public function printXML($xmlPath, $xsltPath)
-    {
-      # code...
+    
+    public function printXML($xmlPath, $xsltPath){
+        $xsldoc = new DOMDocument();
+        $xsldoc->load($xsltPath);
+
+        $xmldoc = new DOMDocument();
+        $xmldoc->load($xmlPath);
+
+        $xsl = new XSLTProcessor();
+        $xsl->importStylesheet($xsldoc);
+        echo $xsl->transformToXML($xmldoc);
     }
   }
 ?>
