@@ -2,6 +2,12 @@
   require 'world_data_parser.php';
 
   $myparser = new WorldDataParser();
-  $path = './world_data.xml';
+  $pathXML = './world_data.xml';
+  $pathXSLT = './world_data.xslt';
 
+  $data = $myparser->parseCSV;
+  $xmlData = $myParser->saveXML($data);
+
+  $table = $myparser->printXML($mlData, $pathXSLT);
+  echo $table;
  ?>
