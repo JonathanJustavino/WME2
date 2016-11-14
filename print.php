@@ -1,13 +1,13 @@
 <?php
   require 'world_data_parser.php';
 
-  $myparser = new WorldDataParser();
+  $myParser = new WorldDataParser();
+  $pathCSV = './world_data.csv';
   $pathXML = './world_data.xml';
   $pathXSLT = './world_data.xslt';
 
-  $data = $myparser->parseCSV;
-  $xmlData = $myParser->saveXML($data);
+  $data = $myParser->parseCSV($pathCSV);
 
-  $table = $myparser->printXML($mlData, $pathXSLT);
-  echo $table;
+  $myParser->saveXML($data);
+  $table = $myParser->printXML($pathXML, $pathXSLT);
  ?>

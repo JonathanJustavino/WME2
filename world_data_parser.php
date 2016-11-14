@@ -12,8 +12,11 @@
     }
 
     public function saveXML($array){
-      $simpleXML = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8"?><Countries></Countries>');
+      $simpleXML = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8"?><countries></countries>');
       $identifyArray = array_map('trim',array_shift($array));
+      foreach ($identifyArray as $key => $value) {
+        $identifyArray[$key] = str_replace(' ', '', $value);
+      }
       $i = 0;
       foreach ($array as $key => $value) {
         foreach ($value as $valkey => $valprop) {
@@ -34,7 +37,7 @@
     public function printXML($xmlPath, $xsltPath){
         $xsldoc = new DOMDocument();
         $xsldoc->load($xsltPath);
-
+        print_r($xsldoc);
         $xmldoc = new DOMDocument();
         $xmldoc->load($xmlPath);
 
