@@ -37,7 +37,7 @@
     public function printXML($xmlPath, $xsltPath){
         $xsldoc = new DOMDocument();
         $xsldoc->load($xsltPath);
-        print_r($xsldoc);
+
         $xmldoc = new DOMDocument();
         $xmldoc->load($xmlPath);
 
