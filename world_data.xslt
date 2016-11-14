@@ -24,16 +24,16 @@
       <tr>
         <td><xsl:value-of select="id"/></td>
         <td><xsl:value-of select="name"/></td>
-        <td><xsl:value-of select="birth rate per 1000"/></td>
-        <td><xsl:value-of select="cellphones per 1000"/></td>
-        <td><xsl:value-of select="children per woman"/></td>
-        <td><xsl:value-of select="electricity consumption per capita"/></td>
+        <td><xsl:value-of select="birthrateper1000"/></td>
+        <td><xsl:value-of select="cellphonesper1000"/></td>
+        <td><xsl:value-of select="childrenperwoman"/></td>
+        <td><xsl:value-of select="electricityconsumptionpercapita"/></td>
         <td><xsl:value-of select="gdp_per_capita"/></td>
         <td><xsl:value-of select="gdp_per_capita_growth"/></td>
-        <td><xsl:value-of select="inflation annual"/></td>
-        <td><xsl:value-of select="internet user per 100"/></td>
-        <td><xsl:value-of select="life expectancy"/></td>
-        <td><xsl:value-of select="military expenditure percent of gdp"/></td>
+        <td><xsl:value-of select="inflationannual"/></td>
+        <td><xsl:value-of select="internetuserper100"/></td>
+        <td><xsl:value-of select="lifeexpectancy"/></td>
+        <td><xsl:value-of select="militaryexpenditurepercentofgdp"/></td>
         <td><xsl:value-of select="gps_lat"/></td>
         <td><xsl:value-of select="gps_long"/></td>
       </tr>
