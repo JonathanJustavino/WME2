@@ -12,7 +12,7 @@
     }
 
     public function saveXML($array){
-      $simpleXML = new SimpleXMLElement('<data></data>');
+      $simpleXML = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8"?><data></data>');
       foreach ($array as $key => $value) {
         foreach ($value as $valkey => $valprop) {
           $trimmed = rtrim($valprop);
