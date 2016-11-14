@@ -25,7 +25,6 @@
           $trimmed = rtrim($valprop);
           $data = $countryTag[0]->addChild($entry);
           $data[0] = $trimmed;
-          print_r($countryTag[0]);
           $i += 1;
         }
         $i = $i%14;
