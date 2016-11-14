@@ -19,16 +19,21 @@
       }
       $i = 0;
       foreach ($array as $key => $value) {
+        $countryTag = $simpleXML->addChild('country');
         foreach ($value as $valkey => $valprop) {
           $entry = $identifyArray[$i];
           $trimmed = rtrim($valprop);
-          $tag = $simpleXML->addChild($entry);
+          $data = $countryTag[0]->addChild($entry);
+          $data[0] = $trimmed;
+          //$tag = $simpleXML->addChild($entry);
           //$element = $tag->addChild($trimmed);
-          $tag[0] = $trimmed;
+          //$tag[0] = $trimmed;
+          print_r($countryTag[0]);
           $i += 1;
         }
         $i = $i%14;
       }
+
       $simpleXML->asXML('./world_data.xml');
       return $simpleXML;
     }

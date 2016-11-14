@@ -20,7 +20,7 @@
         <th style="text-align:left">GPS Latitude</th>
         <th style="text-align:left">GPS Longtitude</th>
       </tr>
-      <xsl:for-each select="data">
+      <xsl:for-each select="countries">
       <tr>
         <td><xsl:value-of select="id"/></td>
         <td><xsl:value-of select="name"/></td>
