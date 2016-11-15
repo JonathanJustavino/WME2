@@ -12,6 +12,15 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
 	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<link href="style.css" type="text/css" rel="stylesheet">
+
+  <?php
+    include("parse.php");
+    include("print.php");
+    include("save.php");
+    include("world_data_parser.php");
+  ?>
+
+
 </head>
 
 <body>
@@ -24,13 +33,13 @@
 				<a href=""><i class="fa fa-list-ul"></i>A1 - Table</a>
 			</li>
 			<li>
-				<a href=""><i class="fa fa-list-ul"></i>A2 - Parse</a>
+				<a href="parse.php"><i class="fa fa-list-ul"></i>A2 - Parse</a>
 			</li>
 			<li>
-				<a href=""><i class="fa fa-list-ul"></i>A2 - Save</a>
+				<a href="save.php"><i class="fa fa-list-ul"></i>A2 - Save</a>
 			</li>
 			<li>
-				<a href=""><i class="fa fa-list-ul"></i>A2 - Print</a>
+				<a href="print.php"><i class="fa fa-list-ul"></i>A2 - Print</a>
 			</li>
 			<li>
 				<a href=""><i class="fa fa-list-ul"></i>A3 - REST</a>
@@ -60,6 +69,9 @@
 				</tr>
 			</thead>
 			<tbody id="table_body">
+        <?php
+
+        ?>
 			</tbody>
 		</table>
 

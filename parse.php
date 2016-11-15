@@ -1,5 +1,5 @@
 <?php
-  require 'world_data_parser.php';
+  require_once 'world_data_parser.php';
 
   $myParser = new WorldDataParser;
   $path = './world_data.csv';
